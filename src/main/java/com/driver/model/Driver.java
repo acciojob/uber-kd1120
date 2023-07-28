@@ -14,6 +14,14 @@ public class Driver {
     private String mobile;
     private String password;
 
+    public Cab getCab() {
+        return cab;
+    }
+
+    public void setCab(Cab cab) {
+        this.cab = cab;
+    }
+
     @OneToOne(cascade = CascadeType.ALL)
     private Cab cab;
     @OneToMany(mappedBy = "driver")

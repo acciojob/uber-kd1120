@@ -21,6 +21,17 @@ public class TripBooking {
 
     private int bill;
 
+
+    private  Driver driver;
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
+    }
+
     public TripBooking(int tripBookingId, String fromLocation, String toLocation, int distanceInKm, TripStatus status, int bill) {
         this.tripBookingId = tripBookingId;
         this.fromLocation = fromLocation;

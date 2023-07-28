@@ -17,10 +17,11 @@ public class Cab {
     @OneToOne
     private Driver driver;
 
-    public Cab(int cabId, boolean available, int perKmRate) {
-        this.id = cabId;
+    public Cab(int id, boolean available, int perKmRate, Driver driver) {
+        this.id = id;
         this.available = available;
         this.perKmRate = perKmRate;
+        this.driver = driver;
     }
 
     public int getId() {
@@ -45,5 +46,13 @@ public class Cab {
 
     public void setPerKmRate(int perKmRate) {
         this.perKmRate = perKmRate;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
     }
 }
