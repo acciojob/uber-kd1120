@@ -1,9 +1,6 @@
 package com.driver.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class TripBooking {
@@ -17,12 +14,28 @@ public class TripBooking {
 
     private int distanceInKm;
 
+    public TripBooking() {
+    }
+
     private TripStatus tripStatus;
 
     private int bill;
 
+    @ManyToOne
+    @JoinColumn
+    private Customer customer;
 
-    private  Driver driver;
+    @ManyToOne
+    @JoinColumn
+    private Driver driver;
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
     public Driver getDriver() {
         return driver;

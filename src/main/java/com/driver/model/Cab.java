@@ -24,6 +24,9 @@ public class Cab {
         this.driver = driver;
     }
 
+    public Cab() {
+    }
+
     public int getId() {
         return id;
     }

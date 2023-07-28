@@ -14,6 +14,9 @@ public class Driver {
     private String mobile;
     private String password;
 
+    public Driver() {
+    }
+
     public Cab getCab() {
         return cab;
     }
